@@ -4,3 +4,123 @@
   background-color: #16a34a;
   color: #ffffff;
 }
+
+/* Paginação do Hero */
+.hero-swiper .swiper-pagination {
+  bottom: 24px;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 28px;
+  height: 4px;
+  border-radius: 0;
+  background: white;
+  opacity: 0.65;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 44px;
+  background: #16a34a;
+  opacity: 1;
+}
+
+/* Setas de navegação */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  color: white;
+  background: rgb(0 0 0 / 35%);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-swiper .swiper-button-prev:hover,
+.hero-swiper .swiper-button-next:hover {
+  color: white;
+  background: #16a34a;
+}
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hero-swiper .swiper-button-prev:focus-visible,
+.hero-swiper .swiper-button-next:focus-visible,
+.hero-swiper .swiper-pagination-bullet:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 4px;
+}
+
+
+/* Zoom suave da imagem */
+.hero-bg {
+  transform: scale(1.08);
+}
+
+.swiper-slide-active .hero-bg {
+  animation: hero-zoom 6s ease-out forwards;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Entrada sequencial do conteúdo */
+.hero-title,
+.hero-description,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-content-in 0.7s ease-out forwards;
+}
+
+.hero-title {
+  animation-delay: 0.15s;
+}
+
+.hero-description {
+  animation-delay: 0.35s;
+}
+
+.hero-actions {
+  animation-delay: 0.55s;
+}
+
+@keyframes hero-content-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respeitar a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    transform: none;
+    animation: none !important;
+  }
+
+  .hero-title,
+  .hero-description,
+  .hero-actions {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+
