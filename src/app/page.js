@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import Indicadores from "@/components/home/Indicadores";
 import SobreEmpresa from "@/components/home/SobreEmpresa";
 import ServicosPrincipais from "@/components/home/ServicosPrincipais";
 import ObrasEmDestaque from "@/components/home/ObrasEmDestaque";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
      <Hero />
+     <Indicadores />
      <SobreEmpresa />
      <ServicosPrincipais />
      <ObrasEmDestaque />
