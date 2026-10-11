@@ -14,14 +14,14 @@ const poppins = Poppins({
 // SEO GLOBAL DO SITE
 export const metadata = {
   title: "Imotec",
-  description: "Site da empresa de contabilidade Nexatesh",
+  description: "Site da empresa de construção civil",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-Ao">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
       <body className={`${poppins.className} antialiased`}>
         {/* Header */}
