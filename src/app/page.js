@@ -2,8 +2,8 @@ import Hero from "@/components/home/Hero";
 
 // SEO GLOBAL DO SITE
 export const metadata = {
-  title: "Nexatexh",
-  description: "Site da empresa de contabilidade Nexatesh",
+  title: "Imotec",
+  description: "Site da empresa de construção civil",
 };
 
 export default function Home() {
