@@ -1,39 +1,45 @@
 "use client";
 
 import ButtonLink from "@/components/ui/ButtonLink";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectCoverflow, A11y } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const servicos = [
   {
     id: 1,
-    icon: "fas fa-drafting-compass",
+    image: "/img/servicos/projectos.jpg",
     title: "Projectos personalizados",
     description:
       "Soluções concebidas de acordo com as necessidades e os objectivos de cada cliente.",
   },
   {
     id: 2,
-    icon: "fas fa-house",
+    image: "/img/servicos/construcao-residencial.jpg",
     title: "Construção residencial",
     description:
       "Construção de espaços habitacionais orientados para as necessidades de cada projecto.",
   },
   {
     id: 3,
-    icon: "fas fa-hammer",
+    image: "/img/servicos/reformas.jpg",
     title: "Reformas e ampliações",
     description:
       "Intervenções para renovar, melhorar e ampliar espaços existentes.",
   },
   {
     id: 4,
-    icon: "fas fa-helmet-safety",
+    image: "/img/servicos/gestao-obras.jpg",
     title: "Gestão de obras",
     description:
       "Acompanhamento e coordenação das diferentes etapas de execução da obra.",
   },
   {
     id: 5,
-    icon: "fas fa-clipboard-list",
+    image: "/img/servicos/consultoria.jpg",
     title: "Consultoria e planeamento",
     description:
       "Apoio na análise, organização e preparação de projectos de construção.",
@@ -42,9 +48,8 @@ const servicos = [
 
 export default function ServicosPrincipais() {
   return (
-    <section className="bg-white px-6 py-16 sm:py-20 lg:py-24">
+    <section className="overflow-hidden bg-white px-6 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        {/* Cabeçalho */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
             Conheça os nossos serviços
@@ -55,30 +60,66 @@ export default function ServicosPrincipais() {
           </p>
         </div>
 
-        {/* Cartões de serviços */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
-          {servicos.map((servico) => (
-            <article
-              key={servico.id}
-              className="group rounded-md border border-gray-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-green-600 hover:shadow-lg sm:p-8"
-            >
-              <div className="mx-auto flex size-14 items-center justify-center rounded-md bg-green-100 text-green-600 transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
-                <i className={`${servico.icon} text-2xl`} aria-hidden="true" />
-              </div>
+        <div className="mt-12 sm:mt-16">
+          <Swiper
+            modules={[Autoplay, Pagination, EffectCoverflow, A11y]}
+            effect="coverflow"
+            centeredSlides
+            grabCursor
+            loop
+            slidesPerView={1}
+            spaceBetween={0}
+            coverflowEffect={{
+              rotate: 35,
+              stretch: 0,
+              depth: 150,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="servicos-swiper overflow-visible! pb-14"
+          >
+            {servicos.map((servico) => (
+              <SwiperSlide key={servico.id} className="py-8">
+                <article className="group relative mx-auto h-95 max-w-85 overflow-hidden rounded-md bg-gray-100 sm:h-105">
+                  <img
+                    src={servico.image}
+                    alt={servico.title}
+                    className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
 
-              <h3 className="mt-6 text-xl font-semibold text-black">
-                {servico.title}
-              </h3>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
-              <p className="mt-3 text-base leading-relaxed text-gray-600">
-                {servico.description}
-              </p>
-            </article>
-          ))}
+                  <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
+                    <h3 className="text-xl font-semibold leading-snug sm:text-2xl">
+                      {servico.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-relaxed text-gray-100 sm:text-base">
+                      {servico.description}
+                    </p>
+                  </div>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
-        {/* Chamada para acção */}
-        <div className="mt-10 text-center sm:mt-12">
+        <div className="mt-8 text-center sm:mt-10">
           <ButtonLink href="/servicos">
             Ver todos os serviços
             <i className="fas fa-arrow-right ml-3" aria-hidden="true" />
