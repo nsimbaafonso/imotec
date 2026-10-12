@@ -106,6 +106,24 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Shape Divider inferior */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 overflow-hidden leading-none"
+        aria-hidden="true"
+      >
+        <svg
+          className="block h-10 w-full sm:h-14 lg:h-20"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,65 C240,110 480,115 720,75 C960,35 1200,30 1440,65 L1440,120 L0,120 Z"
+            fill="#ffffff"
+          />
+        </svg>
+      </div>
     </section>
   );
 }
