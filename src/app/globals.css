@@ -123,4 +123,15 @@
   }
 }
 
+/* Paginação do carrossel de serviços */
+.servicos-swiper .swiper-pagination-bullet {
+  background-color: var(--color-gray-300);
+  opacity: 1;
+  transition: all 300ms ease;
+}
 
+.servicos-swiper .swiper-pagination-bullet-active {
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: var(--color-green-600);
+}
