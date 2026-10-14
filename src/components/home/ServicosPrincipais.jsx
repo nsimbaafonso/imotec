@@ -11,21 +11,21 @@ import "swiper/css/effect-coverflow";
 const servicos = [
   {
     id: 1,
-    image: "/img/servicos/projectos.jpg",
+    image: "/img/servicos/projectos-personalizados.jpg",
     title: "Projectos personalizados",
     description:
       "Soluções concebidas de acordo com as necessidades e os objectivos de cada cliente.",
   },
   {
     id: 2,
-    image: "/img/servicos/construcao-residencial.jpg",
+    image: "/img/servicos/construcao-residenciall.jpg",
     title: "Construção residencial",
     description:
       "Construção de espaços habitacionais orientados para as necessidades de cada projecto.",
   },
   {
     id: 3,
-    image: "/img/servicos/reformas.jpg",
+    image: "/img/servicos/reformas-ampliacoes.jpg",
     title: "Reformas e ampliações",
     description:
       "Intervenções para renovar, melhorar e ampliar espaços existentes.",
@@ -39,7 +39,7 @@ const servicos = [
   },
   {
     id: 5,
-    image: "/img/servicos/consultoria.jpg",
+    image: "/img/servicos/consultoria-planeamento.jpg",
     title: "Consultoria e planeamento",
     description:
       "Apoio na análise, organização e preparação de projectos de construção.",

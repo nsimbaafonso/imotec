@@ -19,21 +19,21 @@ import "swiper/css/effect-fade";
 const slides = [
   {
     id: 1,
-    image: "/img/hero1.jpg",
+    image: "/img/home1.jpg",
     title: "Construir oportunidades para jovens",
     description:
       "Desenvolvemos soluções no sector da construção e da habitação, procurando criar oportunidades e responder às necessidades do mercado angolano.",
   },
   {
     id: 2,
-    image: "/img/hero2.jpg",
+    image: "/img/home2.jpg",
     title: "Soluções para construir o futuro",
     description:
       "Conheça os nossos serviços de construção civil e descubra soluções orientadas para as necessidades de cada projeto.",
   },
   {
     id: 3,
-    image: "/img/hero3.jpg",
+    image: "/img/home3.jpg",
     title: "Compromisso em cada obra",
     description:
       "Explore os nossos projetos e conheça a nossa abordagem à construção e à habitação em Angola.",
