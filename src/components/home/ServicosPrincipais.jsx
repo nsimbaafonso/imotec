@@ -50,29 +50,31 @@ export default function ServicosPrincipais() {
   return (
     <section className="overflow-hidden bg-white px-6 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
+        {/* Cabeçalho da Secção */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
-            Conheça os nossos serviços
+            Conheça os nossos <span className="text-green-600">serviços</span>
           </h2>
 
-          <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-black sm:text-lg">
             Discutimos ideias para realizar sonhos.
           </p>
         </div>
 
-        <div className="mt-12 sm:mt-16">
+        {/* Contentor do Slider Centralizado */}
+        <div className="mx-auto mt-12 w-full max-w-6xl sm:mt-16 flex justify-center">
           <Swiper
             modules={[Autoplay, Pagination, EffectCoverflow, A11y]}
             effect="coverflow"
-            centeredSlides
-            grabCursor
-            loop
+            centeredSlides={true}
+            grabCursor={true}
+            loop={true}
             slidesPerView={1}
             spaceBetween={0}
             coverflowEffect={{
-              rotate: 35,
+              rotate: 30,
               stretch: 0,
-              depth: 150,
+              depth: 120,
               modifier: 1,
               slideShadows: false,
             }}
@@ -90,22 +92,25 @@ export default function ServicosPrincipais() {
                 slidesPerView: 3,
               },
             }}
-            className="servicos-swiper overflow-visible! pb-14"
+            className="servicos-swiper w-full overflow-visible pb-14"
           >
             {servicos.map((servico) => (
-              <SwiperSlide key={servico.id} className="py-8">
-                <article className="group relative mx-auto h-95 max-w-85 overflow-hidden rounded-md bg-gray-100 sm:h-105">
+              <SwiperSlide
+                key={servico.id}
+                className="py-8 flex justify-center"
+              >
+                <article className="group relative mx-auto h-95 w-full max-w-85 overflow-hidden bg-gray-100 sm:h-105">
                   <img
                     src={servico.image}
                     alt={servico.title}
-                    className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
 
                   <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
-                    <h3 className="text-xl font-semibold leading-snug sm:text-2xl">
+                    <h3 className="text-xl font-semibold leading-snug sm:text-2xl text-white">
                       {servico.title}
                     </h3>
 
@@ -119,6 +124,7 @@ export default function ServicosPrincipais() {
           </Swiper>
         </div>
 
+        {/* Botão Inferior */}
         <div className="mt-8 text-center sm:mt-10">
           <ButtonLink href="/servicos">
             Ver todos os serviços
