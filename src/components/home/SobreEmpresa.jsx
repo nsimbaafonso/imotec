@@ -8,7 +8,7 @@ export default function SobreEmpresa() {
     <section className="bg-gray-100 px-6 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Imagem da empresa */}
-        <div className="relative aspect-4/3 overflow-hidden rounded-md bg-gray-200">
+        <div className="relative aspect-4/3 overflow-hidden bg-gray-200">
           <Image
             src="/img/sobre-empresa.jpg"
             alt="Imotec Engenharia & Negócios"
