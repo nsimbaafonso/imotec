@@ -130,7 +130,7 @@ export default function Footer() {
                   className="fas fa-map-marker-alt mt-1 text-green-600"
                   aria-hidden="true"
                 />
-                Angola
+                Município de Belas, Distrito Urbano do Kilamba, Angola
               </div>
             </div>
           </div>
