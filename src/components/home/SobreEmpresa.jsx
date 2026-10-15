@@ -25,7 +25,7 @@ export default function SobreEmpresa() {
           </p>
 
           <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
-            Engenharia, planeamento e construção
+            Engenharia, planeamento e <span className="text-green-600">construção</span>
           </h2>
 
           <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
