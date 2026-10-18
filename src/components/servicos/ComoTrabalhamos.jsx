@@ -38,8 +38,6 @@ export default function ComoTrabalhamos() {
     <section className="bg-white px-6 py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl">
         {/* Cabeçalho */}
-
-        {/* Cabeçalho */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
             Do planeamento à{" "}
