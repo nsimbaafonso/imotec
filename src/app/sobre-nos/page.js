@@ -2,7 +2,6 @@ import Banner from "@/components/ui/Banner";
 import Historia from "@/components/sobre/Historia";
 import MissaoVisaoValores from "@/components/sobre/MissaoVisaoValores";
 import Equipa from "@/components/sobre/Equipa";
-import CtaSobre from "@/components/sections/Cta";
 
 // SEO DA PÁGINA SOBRE
 export const metadata = {
@@ -21,17 +20,6 @@ export default function SobreNos() {
      <Historia />
      <MissaoVisaoValores />
      <Equipa />
-     <CtaSobre
-        title={
-          <>
-            Vamos construir um{" "}
-            <span className="text-green-300">futuro melhor</span>?
-          </>
-        }
-        description="Conheça melhor a Imotec e descubra como podemos colaborar no seu próximo projecto."
-        buttonText="Fale connosco"
-        href="/contatos"
-      />
     </>
   );
 }
