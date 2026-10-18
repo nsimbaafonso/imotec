@@ -22,6 +22,7 @@ export default function Button({
       disabled={disabled}
       className={`
         inline-flex items-center justify-center
+        cursor-pointer
         px-5 py-3 text-sm font-semibold
         transition-colors duration-200
         disabled:cursor-not-allowed disabled:opacity-50
