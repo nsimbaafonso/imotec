@@ -1,6 +1,7 @@
 import Banner from "@/components/ui/Banner";
 import IndicadoresServicos from "@/components/servicos/IndicadoresServicos";
 import ServicosDestaque from "@/components/servicos/ServicosDestaque";
+import ComoTrabalhamos from "@/components/servicos/ComoTrabalhamos";
 
 // SEO DA PÁGINA SERVIÇOS
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Servicos() {
       />
      <IndicadoresServicos />
      <ServicosDestaque />
+     <ComoTrabalhamos />
     </>
   );
 }
