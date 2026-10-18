@@ -1,5 +1,6 @@
 import Banner from "@/components/ui/Banner";
 import IndicadoresServicos from "@/components/servicos/IndicadoresServicos";
+import ServicosDestaque from "@/components/servicos/ServicosDestaque";
 
 // SEO DA PÁGINA SERVIÇOS
 export const metadata = {
@@ -16,6 +17,7 @@ export default function Servicos() {
         description="Conheça as nossas soluções de construção, arquitectura e habitação, desenvolvidas para responder às necessidades dos nossos clientes."
       />
      <IndicadoresServicos />
+     <ServicosDestaque />
     </>
   );
 }
