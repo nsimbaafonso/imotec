@@ -1,7 +1,10 @@
 import Banner from "@/components/ui/Banner";
-//import Hero from "@/components/home/Hero";
+import InfoContatos from "@/components/contatos/InfoContatos";
+import FormularioContato from "@/components/contatos/FormularioContato";
+import Mapa from "@/components/contatos/Mapa";
+import RedesSociais from "@/components/contatos/RedesSociais";
 
-// SEO DA PÁGINA SOBRE
+// SEO DA PÁGINA CONTATOS
 export const metadata = {
   title: "Contatos | Imotec",
   description: "Site da empresa de construção civil",
@@ -11,10 +14,14 @@ export default function Contatos() {
   return (
     <>
      <Banner
-        image="/img/banner-sobre-nos.jpg"
-        title="Sobre nós"
-        description="Conheça a Imotec, a nossa visão e o compromisso com soluções habitacionais adaptadas à realidade angolana."
+        image="/img/banner-contato.jpg"
+        title="Fale connosco"
+        description="Estamos disponíveis para ouvir a sua ideia."
       />
+     <InfoContatos />
+     <FormularioContato />
+     <Mapa />
+     <RedesSociais />
     </>
   );
 }
