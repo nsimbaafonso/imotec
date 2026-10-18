@@ -5,7 +5,7 @@ import ServicosPrincipais from "@/components/home/ServicosPrincipais";
 import ObrasEmDestaque from "@/components/home/ObrasEmDestaque";
 import Diferenciais from "@/components/home/Diferenciais";
 import Parceiros from "@/components/home/Parceiros";
-import CtaHome from "@/components/home/Cta";
+import CtaHome from "@/components/sections/Cta";
 
 // SEO GLOBAL DO SITE
 export const metadata = {
