@@ -1,5 +1,6 @@
 import Banner from "@/components/ui/Banner";
-//import Hero from "@/components/home/Hero";
+import ProjetosEmDestaque from "@/components/projetos/ProjetosEmDestaque";
+import FaqProjetos from "@/components/projetos/FaqProjetos";
 
 // SEO DA PÁGINA PROJETOS
 export const metadata = {
@@ -11,10 +12,12 @@ export default function Projetos() {
   return (
     <>
      <Banner
-        image="/img/banner-sobre-nos.jpg"
-        title="Sobre nós"
-        description="Conheça a Imotec, a nossa visão e o compromisso com soluções habitacionais adaptadas à realidade angolana."
+        image="/img/banner-projetos.jpg"
+        title="Os nossos projectos"
+        description="Conheça os projectos da Imotec e as soluções desenvolvidas nas áreas da construção, arquitectura e habitação."
       />
+     <ProjetosEmDestaque />
+     <FaqProjetos />
     </>
   );
 }
