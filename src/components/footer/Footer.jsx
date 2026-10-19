@@ -19,7 +19,7 @@ const services = [
 const socialLinks = [
   {
     name: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://web.facebook.com/profile.php?id=61551819160493",
     icon: "fab fa-facebook-f",
   },
   {
@@ -104,25 +104,25 @@ export default function Footer() {
 
             <div className="mt-5 flex flex-col gap-4">
               <a
-                href="mailto:geral@imotec.ao"
+                href="mailto:imoteceng@gmail.com"
                 className="flex items-start gap-3 text-sm text-gray-400 transition-colors hover:text-green-600"
               >
                 <i
                   className="fas fa-envelope mt-1 text-green-600"
                   aria-hidden="true"
                 />
-                geral@imotec.ao
+                imoteceng@gmail.com
               </a>
 
               <a
-                href="tel:+244000000000"
+                href="tel:+244948039182"
                 className="flex items-start gap-3 text-sm text-gray-400 transition-colors hover:text-green-600"
               >
                 <i
                   className="fas fa-phone mt-1 text-green-600"
                   aria-hidden="true"
                 />
-                +244 000 000 000
+                +244 948 039 182
               </a>
 
               <div className="flex items-start gap-3 text-sm text-gray-400">

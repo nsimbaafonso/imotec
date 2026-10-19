@@ -6,7 +6,7 @@ const redesSociais = [
   {
     nome: "Facebook",
     icone: "fab fa-facebook-f",
-    url: "",
+    url: "https://web.facebook.com/profile.php?id=61551819160493",
   },
   {
     nome: "Instagram",
@@ -20,7 +20,8 @@ const redesSociais = [
   },
 ];
 
-const whatsapp = ""; // Inserir link oficial do WhatsApp
+const mensagem = "Olá! Vim através do website da Imotec Engenharia & Negócios, Lda. e gostaria de obter mais informações sobre os vossos serviços.";
+const whatsapp = `https://wa.me/244948039182?text=${encodeURIComponent(mensagem)}`;
 
 export default function RedesSociais() {
   return (
