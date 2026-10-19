@@ -1,9 +1,13 @@
-
 export default function WhatsAppButton({
   phone = "244924034804",
   size = 64,
   tooltip = "Fale connosco no WhatsApp",
 }) {
+  const mensagem =
+    "Olá! Vim através do website da Imotec Engenharia & Negócios, Lda. e gostaria de obter mais informações sobre os vossos serviços.";
+
+  const whatsapp = `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`;
+
   return (
     <div className="fixed bottom-6 right-6 z-50 group">
       {/* Tooltip */}
@@ -13,17 +17,22 @@ export default function WhatsAppButton({
 
       {/* Botão com borda animada */}
       <a
-        href={`https://wa.me/${phone}`}
+        href={whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 transition transform hover:scale-110"
+        aria-label={tooltip}
+        style={{ width: size, height: size }}
+        className="relative flex items-center justify-center rounded-full bg-green-500 hover:bg-green-600 transition transform hover:scale-110"
       >
         {/* Borda animada pulse */}
         <span className="absolute inset-0 rounded-full border-4 border-green-400 animate-ping"></span>
         <span className="absolute inset-0 rounded-full border-4 border-green-400 opacity-50 animate-ping delay-200"></span>
 
         {/* Ícone WhatsApp */}
-        <i className="fab fa-whatsapp text-white text-2xl relative z-10"></i>
+        <i
+          className="fab fa-whatsapp text-white text-2xl relative z-10"
+          aria-hidden="true"
+        ></i>
       </a>
     </div>
   );
