@@ -1,5 +1,5 @@
 export default function WhatsAppButton({
-  phone = "244924034804",
+  phone = "244948039182",
   size = 64,
   tooltip = "Fale connosco no WhatsApp",
 }) {
