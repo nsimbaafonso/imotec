@@ -1,11 +1,34 @@
 import ButtonLink from "@/components/ui/ButtonLink";
 
 export const metadata = {
-  title: "Página não encontrada | Imotec",
-  description: "A página que procura não existe ou foi movida.",
+  title: "Página não encontrada (404) | Imotec",
+
+  description:
+    "A página que procura não foi encontrada. Regresse ao início ou contacte a Imotec Engenharia & Negócios para obter ajuda.",
+
   robots: {
     index: false,
     follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
+
+  openGraph: {
+    title: "Página não encontrada (404) | Imotec",
+    description:
+      "O endereço que procura não corresponde a uma página disponível. Visite o website da Imotec ou entre em contacto connosco.",
+    type: "website",
+    locale: "pt_AO",
+    siteName: "Imotec Engenharia & Negócios",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Página não encontrada (404) | Imotec",
+    description:
+      "A página não foi encontrada. Regresse ao início ou contacte a Imotec.",
   },
 };
 
