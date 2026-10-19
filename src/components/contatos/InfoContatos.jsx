@@ -4,14 +4,14 @@ const contactos = [
   {
     icon: "fa-phone",
     titulo: "Telefone",
-    valor: "+244 000 000 000",
-    href: "tel:+244000000000",
+    valor: "+244 948 039 182",
+    href: "tel:+244948039182",
   },
   {
     icon: "fa-envelope",
     titulo: "Email",
-    valor: "geral@imotec.ao",
-    href: "mailto:geral@imotec.ao",
+    valor: "imoteceng@gmail.com",
+    href: "mailto:imoteceng@gmail.com",
   },
   {
     icon: "fa-location-dot",
