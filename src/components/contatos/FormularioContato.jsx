@@ -1,8 +1,8 @@
-
 "use client";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import toast from "react-hot-toast";
 
 import contatoSchema from "@/validations/contatoSchema";
 import Input from "@/components/ui/Input";
@@ -27,8 +27,46 @@ export default function FormularioContato() {
   });
 
   async function onSubmit(data) {
-    // Integrar com o backend posteriormente.
-    console.log(data);
+    const toastId = toast.loading("A preparar a sua mensagem...");
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 800));
+
+      const numeroWhatsApp = "244948039182";
+
+      const assuntos = {
+        orcamento: "Pedido de orçamento",
+        construcao: "Construção civil",
+        arquitectura: "Arquitectura e design",
+        habitacao: "Habitação e imobiliário",
+        informacoes: "Pedido de informações",
+        outro: "Outro assunto",
+      };
+
+      const mensagem = [
+        "*Novo contacto através do website da Imotec*",
+        "",
+        `*Nome:* ${data.nome}`,
+        `*E-mail:* ${data.email}`,
+        `*Telefone:* ${data.telefone}`,
+        `*Assunto:* ${assuntos[data.assunto] || data.assunto}`,
+        "",
+        "*Mensagem:*",
+        data.mensagem,
+      ].join("\n");
+
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+      toast.success("Mensagem preparada para o WhatsApp.", {
+        id: toastId,
+      });
+    } catch {
+      toast.error("Não foi possível preparar a mensagem. Tente novamente.", {
+        id: toastId,
+      });
+    }
   }
 
   return (
@@ -36,8 +74,7 @@ export default function FormularioContato() {
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div>
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl">
-            Envie-nos uma{" "}
-            <span className="text-green-700">mensagem</span>
+            Envie-nos uma <span className="text-green-700">mensagem</span>
           </h2>
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-gray-600 sm:text-lg">
@@ -147,16 +184,9 @@ export default function FormularioContato() {
             </div>
 
             <div className="sm:col-span-2">
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                fullWidth
-              >
+              <Button type="submit" disabled={isSubmitting} fullWidth>
                 {isSubmitting ? "A enviar..." : "Enviar mensagem"}
-                <i
-                  className="fas fa-arrow-right ml-3"
-                  aria-hidden="true"
-                />
+                <i className="fas fa-arrow-right ml-3" aria-hidden="true" />
               </Button>
             </div>
           </div>
