@@ -25,27 +25,10 @@ export default function Equipa() {
     },
     {
       id: 3,
-      image: "/img/equipa/teacher1.png",
-      name: "Membro de teste 1",
-      role: "Gestão de projectos",
+      image: "/img/equipa/diretor-de-projetos.jpg",
+      name: "Geovani Adriano",
+      role: "Diretor de Projectos",
       redes: [{ name: "Facebook", icon: "fab fa-facebook-f", href: "#" }],
-    },
-    {
-      id: 4,
-      image: "/img/equipa/teacher2.png",
-      name: "Membro de teste 2",
-      role: "Engenharia e construção",
-      redes: [{ name: "LinkedIn", icon: "fab fa-linkedin-in", href: "#" }],
-    },
-    {
-      id: 5,
-      image: "/img/equipa/teacher3.png",
-      name: "Membro de teste 3",
-      role: "Arquitectura e design",
-      redes: [
-        { name: "Instagram", icon: "fab fa-instagram", href: "#" },
-        { name: "Facebook", icon: "fab fa-facebook-f", href: "#" },
-      ],
     },
   ];
 
