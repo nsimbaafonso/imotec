@@ -27,7 +27,7 @@ export default function Equipa() {
       id: 3,
       image: "/img/equipa/diretor-de-projetos.jpg",
       name: "Geovani Adriano",
-      role: "Diretor de Projectos",
+      role: "Director de Projectos",
       redes: [{ name: "Facebook", icon: "fab fa-facebook-f", href: "#" }],
     },
   ];
