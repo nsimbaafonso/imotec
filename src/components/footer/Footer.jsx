@@ -24,7 +24,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/imotec_engenharia_e_negocios",
     icon: "fab fa-instagram",
   },
   {
