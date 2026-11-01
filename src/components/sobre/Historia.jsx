@@ -47,7 +47,7 @@ export default function Historia() {
         {/* Imagem */}
         <div className="relative h-80 overflow-hidden sm:h-105 lg:h-125">
           <img
-            src="/img/sobre-historia2.jpg"
+            src="/img/sobre-imotec2.jpg"
             alt="Projecto de construção da Imotec"
             className="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
             loading="lazy"

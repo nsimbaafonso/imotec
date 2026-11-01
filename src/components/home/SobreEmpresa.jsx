@@ -10,7 +10,7 @@ export default function SobreEmpresa() {
         {/* Imagem da empresa */}
         <div className="relative aspect-4/3 overflow-hidden bg-gray-200">
           <Image
-            src="/img/sobre-empresa.jpg"
+            src="/img/sobre-imotec.jpg"
             alt="Imotec Engenharia & Negócios"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
